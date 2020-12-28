@@ -96,9 +96,9 @@ deletePerson(id) {
       <td>{person.firstName}</td>  
       <td>{person.lastName}</td>  
       <td>
-      <button className=" btn-2" onClick={this.editPerson.bind(this, person.id, person.firstName, person.lastName )}>Edit</button>
+      <button className="edit" onClick={this.editPerson.bind(this, person.id, person.firstName, person.lastName )}>Edit</button>
      
-      <button className="btn-2 delete" onClick={this.deletePerson.bind(this, person.id )}>Delete</button>
+      <button className="delete" onClick={this.deletePerson.bind(this, person.id )}>Delete</button>
       </td>  
     </tr>
     )
@@ -107,17 +107,18 @@ deletePerson(id) {
      <div className = "App container">
 
         <h1 className="title">People</h1>
-        <h3 className = 'name'>John San Pietro</h3>
-        <h4 className ='email'>HireMe@JohnSP.com</h4>
+        <h3 className="website">www.JohnSP.com</h3>
       
-       
-        <button className="custom-btn btn-12 my-3" onClick={this.toggleNewPersonModal.bind(this)}><span>Add New</span><span>Add Person</span></button>
+    
        <div className ='box'>
         <i className="fas fa-database icon"><h3 className= 'iconText'>SQL Server</h3></i>
         <i className="fab fa-windows windows icon"><h3 className='iconText'>Azure WebAPI</h3></i>
         <i className="fab fa-react icon"><h3 className ='iconText'>React</h3></i>
         </div>
 
+        <div className="AddButtonDiv">
+       <button className="AddButton" onClick={this.toggleNewPersonModal.bind(this)}>Add New Person</button>
+       </div>
 
         <Modal className ='modaltitle'  isOpen={this.state.newPersonModal} toggle={this.toggleNewPersonModal.bind(this)}>
         <ModalHeader className='modalbody' toggle={this.toggleNewPersonModal.bind(this)}>Add a new person</ModalHeader>
