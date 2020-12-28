@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/632ecff5-0598-4944-a323-da9e9469de85/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/JohnSPreactfrontend",
+    "appService.deploySubpath": "."
+}
